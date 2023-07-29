@@ -1,0 +1,21 @@
+.countries {
+	padding: 10px;
+	display: grid;
+}
+.countries h1 {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 3rem;
+	text-decoration: underline;
+}
+.countriesBox {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 20px;
+}
+
+.search {
+	display: block;
+	width: 400px;
+	margin: auto;
+}

@@ -1,0 +1,59 @@
+.country {}
+.country__header {
+	background-color: wheat;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.country__header__title {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+.country__header__imgBox {
+	width: 600px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: auto;
+}
+.country__header__img {
+	width: 100%;
+	height: 100px;
+	object-fit: contain;
+}
+.country__more {
+	font-size: 1.5rem;
+	padding: 10px;
+}
+.country__more__capital {
+	margin-bottom: 5px;
+}
+.country__more p {
+	margin-bottom: 10px;
+	padding-left: 40px;
+	background-size: 25px;
+	background-repeat: no-repeat;
+}
+.country__more__curr {
+	background: url('./icons/curr.png');
+}
+.country__more__tld {
+	background: url('./icons/domain.png');
+}
+.country__more__area {
+	background: url('./icons/area.png');
+}
+.country__more__timezone {
+	background: url('./icons/timezone2.png');
+}
+.country__more__population {
+	background: url('./icons/popul3.png');
+}
+.country__more__fifa {
+	background: url('./icons/fifa.png');
+}
+.country__map {
+	background-color: rgb(165, 165, 255);
+	padding: 5px 10px;
+	border-radius: 50px;
+	font-weight: bolder;
+}
