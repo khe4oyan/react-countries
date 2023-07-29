@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.b0ae0840.css",
-    "main.js": "./static/js/main.f51b78ee.js",
-    "static/media/popul3.png": "./static/media/popul3.d4f1ac702df108f94b32.png",
-    "static/media/timezone2.png": "./static/media/timezone2.57d0d8d5034d8ed732aa.png",
-    "static/media/pin.png": "./static/media/pin.237cf336b5a299849e6c.png",
-    "static/media/curr.png": "./static/media/curr.45cd457f8e16c6588a04.png",
-    "static/media/domain.png": "./static/media/domain.d94323db5748a1ab728d.png",
-    "index.html": "./index.html",
-    "main.b0ae0840.css.map": "./static/css/main.b0ae0840.css.map",
-    "main.f51b78ee.js.map": "./static/js/main.f51b78ee.js.map"
+    "main.css": "/react-countries/static/css/main.98807ea7.css",
+    "main.js": "/react-countries/static/js/main.62a6c299.js",
+    "static/media/popul3.png": "/react-countries/static/media/popul3.d4f1ac702df108f94b32.png",
+    "static/media/timezone2.png": "/react-countries/static/media/timezone2.57d0d8d5034d8ed732aa.png",
+    "static/media/pin.png": "/react-countries/static/media/pin.237cf336b5a299849e6c.png",
+    "static/media/curr.png": "/react-countries/static/media/curr.45cd457f8e16c6588a04.png",
+    "static/media/domain.png": "/react-countries/static/media/domain.d94323db5748a1ab728d.png",
+    "index.html": "/react-countries/index.html",
+    "main.98807ea7.css.map": "/react-countries/static/css/main.98807ea7.css.map",
+    "main.62a6c299.js.map": "/react-countries/static/js/main.62a6c299.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0ae0840.css",
-    "static/js/main.f51b78ee.js"
+    "static/css/main.98807ea7.css",
+    "static/js/main.62a6c299.js"
   ]
 }
