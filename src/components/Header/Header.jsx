@@ -1,26 +1,51 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import s from './Header.module.css';
 import { types } from '../../tool/reducer';
+import fetchData from '../../api/fetchData';
+import { ctx } from '../../App';
 
 export default function Header({ dispatch }) {
-	const [inputValue, setInputValue] = useState('');
+	const { text } = React.useContext(ctx);
 
-	
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			dispatch({ type: types.SEARCH_TEXT, payload: inputValue })
-		}, 500);
+			if (text === '') { 
+				fetchData.getAllCountries(dispatch);
+			} else {
+				fetchData.getSearchingAllCountries(text, dispatch);
+			}
+		}, 700);
 
 		return () => clearTimeout(timer);
-	}, [inputValue]);
+	}, [text]);
+
+	const regions = [
+		"Oceania",
+		"Americas",
+		"Africa",
+		"Europe",
+		"Asia",
+		"Antarctic",
+	];
+
+	const getRegion = (regionName) => {
+		fetchData.getRegionCountries(regionName, dispatch)
+	}
 
 	return (
 		<header className={`center ${s.header}`}>
-			<button onClick={() => dispatch({ type: types.SHOW_ALL })}>all</button>
+			<div>
+				<button onClick={() => fetchData.getAllCountries(dispatch)}>all</button>
+				{
+					regions.map((item, i) =>
+					<button onClick={() => getRegion(item)} key={ i }>{ item }</button>
+					)
+				}
+			</div>
 			<div>
 				<input 
-					value={ inputValue }
-					onChange={(e) => setInputValue(e.target.value)}
+					value={ text }
+					onChange={(e) => dispatch({ type: types.TEXT_UPDATE, payload: e.target.value })}
 					type="text"
 					placeholder='search'
 				/>
