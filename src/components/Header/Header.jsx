@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react'
-import s from './Header.module.css';
-import { types } from '../../tool/reducer';
+import './Header.css';
 import fetchData from '../../api/fetchData';
-import { ctx } from '../../App';
+import { useDispatch, useSelector } from 'react-redux'; 
 
-export default function Header({ dispatch }) {
-	const { text } = React.useContext(ctx);
+export default function Header({ regionsRefs }) {
+	const dispatch = useDispatch();
+	const searchText = useSelector(state => state.search.searchText);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			if (text === '') { 
-				fetchData.getAllCountries(dispatch);
+			if (searchText !== '') { 
+				fetchData.getSearchingAllCountries(searchText, dispatch);
 			} else {
-				fetchData.getSearchingAllCountries(text, dispatch);
+				dispatch({ type: 'searchedCountries', payload: []});
 			}
 		}, 700);
 
 		return () => clearTimeout(timer);
-	}, [text]);
+	}, [searchText]);
 
 	const regions = [
 		"Oceania",
@@ -28,24 +28,28 @@ export default function Header({ dispatch }) {
 		"Antarctic",
 	];
 
+	const scrollTo = (ref) => {
+		ref.scrollIntoView({ behavior: 'smooth' });
+	}
+
 	const getRegion = (regionName) => {
 		fetchData.getRegionCountries(regionName, dispatch)
 	}
 
 	return (
-		<header className={`center ${s.header}`}>
+		<header className='center header'>
 			<div>
-				<button onClick={() => fetchData.getAllCountries(dispatch)}>all</button>
 				{
 					regions.map((item, i) =>
-					<button onClick={() => getRegion(item)} key={ i }>{ item }</button>
+						<button onClick={() => scrollTo(regionsRefs[i].current)} key={ i }>{ item }</button>
 					)
 				}
 			</div>
 			<div>
+				<button onClick={() => dispatch({ type: 'edit', payload: ''})}>All</button>
 				<input 
-					value={ text }
-					onChange={(e) => dispatch({ type: types.TEXT_UPDATE, payload: e.target.value })}
+					value={ searchText }
+					onChange={(e) => dispatch({ type: 'edit', payload: e.target.value })}
 					type="text"
 					placeholder='search'
 				/>

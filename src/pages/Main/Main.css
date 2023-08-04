@@ -1,0 +1,10 @@
+.regionHeaderText {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 2.5rem;
+	text-decoration: underline;
+	scroll-margin-top: 4rem;
+}
+.regionHeaderText::first-letter {
+	text-transform: uppercase;
+}

@@ -1,14 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ctx } from '../../App'
 import CountryDump from './CountryDump'
+import fetchData from '../../api/fetchData';
 
 export default function Country() {
-	const { index } = useParams();
-	const data = useContext(ctx).countries[index];
+	const { ccn3 } = useParams();
+	const [data, setData] = useState(null);
+
+	useEffect(() => {
+		fetchData.getCountry(ccn3, setData);
+	}, []);
 
 	return (
-		data !== undefined &&
+		data !== null &&
 		<CountryDump data={ data }/>
 	)
 }

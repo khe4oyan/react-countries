@@ -1,6 +1,6 @@
 .country {}
 .country__header {
-	background-color: wheat;
+	background-color: var(--c1);
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -26,12 +26,15 @@
 }
 .country__more__capital {
 	margin-bottom: 5px;
+	color: white;
+
 }
 .country__more p {
 	margin-bottom: 10px;
 	padding-left: 40px;
 	background-size: 25px;
 	background-repeat: no-repeat;
+	color: white;
 }
 .country__more__curr {
 	background: url('./icons/curr.png');

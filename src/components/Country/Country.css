@@ -1,0 +1,20 @@
+.countryShort {
+	position: relative;
+	background-color: rgba(0, 0, 0, .3);
+	padding: 5px;
+	border-radius: 5px;
+	color: white;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	margin-bottom: 10px;
+	grid-template-rows: subgrid;
+}
+.countryH3 {
+	text-align: center;
+	color: white;
+	text-shadow: 0px 0px 4px black;
+}
+.countryShort img {
+	width: 100%;
+	object-fit: contain;
+	border-radius: 5px;
+}

@@ -1,18 +1,28 @@
-import React, { useContext } from 'react'
-import s from './Countries.module.css';
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import './Countries.css';
 import Country from '../Country/Country';
-import { ctx } from '../../App';
+import fetchData from '../../api/fetchData'
 
-export default function Countries() {
-	const { countries, text } = useContext(ctx);
+export default function Countries({ regionName }) {
+	const countries = useSelector(state => state.countries[regionName]);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		if (countries.length === 0) {
+			fetchData.getRegionCountries(regionName, dispatch);
+		}
+	}, []);
 
 	return (
-		<div className={ s.countries }>
-			<h1>Countries</h1>
-			<div className={ `${ s.countriesBox } ${ text !== '' && s.search }` }>
+		<div className='countries'>
+			<div className='countriesBox'>
 				{
 					countries.map((item, i) => 
-						<Country key={ i } ind={ i } data={ item } />
+						<Country 
+							data={ item } 
+							key={ i }
+						/>
 					)
 				}
 			</div>
