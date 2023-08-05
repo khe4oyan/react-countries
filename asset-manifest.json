@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/khe4oyan/react-countries/static/css/main.94bc02fb.css",
-    "main.js": "/khe4oyan/react-countries/static/js/main.e6062c77.js",
-    "static/media/popul3.png": "/khe4oyan/react-countries/static/media/popul3.d4f1ac702df108f94b32.png",
-    "static/media/timezone2.png": "/khe4oyan/react-countries/static/media/timezone2.57d0d8d5034d8ed732aa.png",
-    "static/media/pin.png": "/khe4oyan/react-countries/static/media/pin.237cf336b5a299849e6c.png",
-    "static/media/curr.png": "/khe4oyan/react-countries/static/media/curr.45cd457f8e16c6588a04.png",
-    "static/media/domain.png": "/khe4oyan/react-countries/static/media/domain.d94323db5748a1ab728d.png",
-    "index.html": "/khe4oyan/react-countries/index.html",
-    "main.94bc02fb.css.map": "/khe4oyan/react-countries/static/css/main.94bc02fb.css.map",
-    "main.e6062c77.js.map": "/khe4oyan/react-countries/static/js/main.e6062c77.js.map"
+    "main.css": "/react-countries/static/css/main.c94a8704.css",
+    "main.js": "/react-countries/static/js/main.ded3a8c7.js",
+    "static/media/popul3.png": "/react-countries/static/media/popul3.d4f1ac702df108f94b32.png",
+    "static/media/timezone2.png": "/react-countries/static/media/timezone2.57d0d8d5034d8ed732aa.png",
+    "static/media/pin.png": "/react-countries/static/media/pin.237cf336b5a299849e6c.png",
+    "static/media/curr.png": "/react-countries/static/media/curr.45cd457f8e16c6588a04.png",
+    "static/media/domain.png": "/react-countries/static/media/domain.d94323db5748a1ab728d.png",
+    "index.html": "/react-countries/index.html",
+    "main.c94a8704.css.map": "/react-countries/static/css/main.c94a8704.css.map",
+    "main.ded3a8c7.js.map": "/react-countries/static/js/main.ded3a8c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.94bc02fb.css",
-    "static/js/main.e6062c77.js"
+    "static/css/main.c94a8704.css",
+    "static/js/main.ded3a8c7.js"
   ]
 }
